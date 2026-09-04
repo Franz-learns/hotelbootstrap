@@ -1,5 +1,5 @@
 // ==========================================
-// LUXENT HOTEL - CUSTOM JAVASCRIPT
+// RED HOTEL - CUSTOM JAVASCRIPT
 // ==========================================
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -1,17 +1,11 @@
 :root {
-  --velvet: #8b0000;
-  --velvet-dark: #5c0000;
-  --velvet-light: #a52a2a;
-  --burgundy: #4a0000;
-  --dark: #160808;
-  --cream: #f8f1e8;
-  --white: #ffffff;
-  --gold: #d4af37;
+  --red: #8B0000;
+  --red-dark: #5C0000;
+  --red-light: #C1121F;
+  --cream: #FFF5F5;
+  --white: #FFFFFF;
+  --black: #111111;
 }
-
-/* ==========================================
-   GENERAL
-   ========================================== */
 
 html {
   scroll-behavior: smooth;
@@ -24,57 +18,55 @@ body {
   background: var(--cream);
 }
 
-/* ==========================================
-   NAVIGATION / HEADER
-   ========================================== */
+/* =========================
+   HEADER / NAVBAR
+   ========================= */
 
 .custom-navbar {
-  background: rgba(92, 0, 0, 0.97);
-  backdrop-filter: blur(8px);
-  border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+  background: var(--red) !important;
+  border-bottom: 3px solid var(--red-light);
 }
 
 .navbar-brand {
-  letter-spacing: 2px;
   color: white !important;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .nav-link {
-  margin-left: 8px;
   color: white !important;
-  transition: 0.3s ease;
+  margin-left: 10px;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: #e6c85c !important;
+  color: #ffd6d6 !important;
 }
 
-/* ==========================================
+/* =========================
    BUTTONS
-   ========================================== */
+   ========================= */
 
 .btn-gold {
-  background: var(--velvet);
-  border: 1px solid var(--velvet);
+  background: var(--red-light);
+  border: 1px solid var(--red-light);
   color: white;
-  font-weight: 600;
-  border-radius: 8px;
+  font-weight: bold;
 }
 
 .btn-gold:hover {
-  background: var(--velvet-light);
-  border-color: var(--velvet-light);
+  background: var(--red-dark);
+  border-color: var(--red-dark);
   color: white;
 }
 
-/* ==========================================
-   HERO
-   ========================================== */
+/* =========================
+   HERO SECTION
+   ========================= */
 
 .hero-section {
   position: relative;
   min-height: 100vh;
-
   background-image: url("Photos/lobby.png");
   background-size: cover;
   background-position: center;
@@ -86,8 +78,8 @@ body {
 
   background: linear-gradient(
     90deg,
-    rgba(40, 0, 0, 0.88),
-    rgba(92, 0, 0, 0.58),
+    rgba(92, 0, 0, 0.85),
+    rgba(139, 0, 0, 0.55),
     rgba(0, 0, 0, 0.25)
   );
 }
@@ -98,61 +90,46 @@ body {
 }
 
 .letter-spacing {
+  color: #ff8080;
   letter-spacing: 4px;
-  font-weight: 700;
-  color: #e6c85c;
+  font-weight: bold;
 }
 
 .image-caption {
   position: absolute;
-  bottom: 10px;
   right: 15px;
-  z-index: 3;
-
+  bottom: 10px;
   color: white;
-  font-size: 0.7rem;
-  opacity: 0.7;
+  font-size: 0.75rem;
 }
 
-/* ==========================================
-   GENERAL SECTIONS
-   ========================================== */
+/* =========================
+   TITLES
+   ========================= */
 
 .section-label {
-  display: inline-block;
-
-  color: var(--velvet);
-
-  font-size: 0.8rem;
-  font-weight: 700;
+  color: var(--red-light);
+  font-weight: bold;
   letter-spacing: 3px;
-
-  margin-bottom: 8px;
 }
 
 .section-title {
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .section-title::after {
   content: "";
-
   display: block;
-
   width: 60px;
   height: 4px;
-
-  background: var(--velvet);
-
-  margin-top: 12px;
-
-  border-radius: 5px;
+  background: var(--red-light);
+  margin-top: 10px;
 }
 
-/* ==========================================
-   IMAGE OVERLAY
-   ========================================== */
+/* =========================
+   OVERLAY CARD
+   ========================= */
 
 .overlay-card {
   position: relative;
@@ -160,51 +137,42 @@ body {
 
 .overlay-box {
   position: absolute;
-
   left: 25px;
   bottom: 25px;
 
-  background: rgba(74, 0, 0, 0.92);
-
+  background: rgba(139, 0, 0, 0.92);
   color: white;
 
   padding: 18px 22px;
-
   border-radius: 10px;
-
-  border-left: 4px solid var(--gold);
 }
 
 .overlay-box small {
-  color: #e6c85c;
-  letter-spacing: 2px;
+  color: #ffd6d6;
 }
 
-/* ==========================================
-   AMENITY CARDS
-   ========================================== */
+/* =========================
+   AMENITIES
+   ========================= */
 
 .amenity-card {
   background: white;
 
-  border-radius: 16px;
-
+  border-radius: 15px;
   overflow: hidden;
 
-  border-top: 4px solid var(--velvet);
+  border-top: 5px solid var(--red);
 
-  box-shadow: 0 8px 25px rgba(60, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: 0.3s;
 }
 
 .amenity-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-8px);
 
   box-shadow:
-    0 14px 30px rgba(92, 0, 0, 0.25);
+    0 15px 30px rgba(139,0,0,0.25);
 }
 
 .amenity-image {
@@ -214,181 +182,84 @@ body {
 }
 
 .amenity-card h3 {
-  font-size: 1.35rem;
-  font-weight: 700;
-
-  color: var(--velvet-dark);
+  color: var(--red);
+  font-weight: bold;
 }
 
-/* ==========================================
+/* =========================
    RESERVATION FORM
-   ========================================== */
+   ========================= */
 
 .reservation-box {
-  background: linear-gradient(
-    135deg,
-    #fff8f0,
-    #f3dfd5
-  );
+  background: var(--red);
+
+  color: white;
 
   border-radius: 20px;
-
-  border: 1px solid rgba(139, 0, 0, 0.2);
-
-  border-top: 6px solid var(--velvet);
 
   padding: 30px;
 
   box-shadow:
-    0 10px 30px rgba(92, 0, 0, 0.15);
+    0 10px 30px rgba(139,0,0,0.25);
 }
 
-/* Form labels */
-
+.reservation-box h2,
+.reservation-box h3,
+.reservation-box h4,
+.reservation-box p,
 .reservation-box label {
-  color: var(--velvet-dark);
-  font-weight: 600;
+  color: white;
 }
-
-/* Input fields */
 
 .form-control,
 .form-select {
-  padding: 12px 14px;
-
-  border-radius: 8px;
-
-  border: 1px solid #c9a9a9;
-
-  background: white;
+  padding: 12px;
+  border-radius: 10px;
 }
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--velvet);
+  border-color: var(--red-light);
 
   box-shadow:
-    0 0 0 0.2rem rgba(139, 0, 0, 0.15);
+    0 0 0 0.2rem rgba(255,255,255,0.2);
 }
 
-/* Submit button */
-
-.reservation-box .btn-dark {
-  background: var(--velvet);
-  border-color: var(--velvet);
-
-  color: white;
-
-  font-weight: 600;
-}
-
-.reservation-box .btn-dark:hover {
-  background: var(--velvet-dark);
-  border-color: var(--velvet-dark);
-}
-
-/* ==========================================
-   CONTACT SECTION
-   ========================================== */
+/* =========================
+   CONTACT
+   ========================= */
 
 .contact-section {
-  background:
-    linear-gradient(
-      135deg,
-      var(--burgundy),
-      var(--velvet-dark)
-    );
-
+  background: var(--red-dark);
   color: white;
-
-  border-top: 4px solid var(--gold);
 }
 
 .light-label {
-  color: #e6c85c;
+  color: #ffd6d6;
 }
 
-/* ==========================================
+/* =========================
    FOOTER
-   ========================================== */
+   ========================= */
 
 .footer {
-  background:
-    linear-gradient(
-      135deg,
-      #4a0000,
-      #250000
-    );
-
-  color: #eee;
-
-  border-top: 2px solid rgba(212, 175, 55, 0.4);
+  background: var(--red);
+  color: white;
 }
 
 .footer a {
-  color: #eee;
-
+  color: white;
   text-decoration: none;
-
   margin-left: 15px;
-
-  transition: 0.3s ease;
 }
 
 .footer a:hover {
-  color: #e6c85c;
+  color: #ffd6d6;
 }
 
-/* ==========================================
-   RED VELVET ELEMENTS
-   ========================================== */
-
-.red-badge {
-  display: inline-block;
-
-  background: var(--velvet);
-
-  color: white;
-
-  padding: 6px 14px;
-
-  border-radius: 50px;
-
-  font-size: 0.75rem;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-}
-
-.red-line {
-  width: 60px;
-  height: 4px;
-
-  background: var(--velvet);
-
-  margin: 15px 0;
-
-  border-radius: 5px;
-}
-
-.btn-outline-red {
-  border: 2px solid var(--velvet);
-
-  color: var(--velvet);
-
-  font-weight: 600;
-}
-
-.btn-outline-red:hover {
-  background: var(--velvet);
-
-  color: white;
-}
-
-/* ==========================================
+/* =========================
    MOBILE
-   ========================================== */
+   ========================= */
 
 @media (max-width: 991.98px) {
 
@@ -427,16 +298,11 @@ body {
   .overlay-box {
     left: 15px;
     bottom: 15px;
-
     padding: 12px 15px;
   }
 
   .amenity-image {
     height: 210px;
-  }
-
-  .reservation-box {
-    padding: 20px;
   }
 
   .footer {
@@ -452,7 +318,7 @@ body {
 @media (max-width: 575.98px) {
 
   .hero-content h1 {
-    font-size: 2.15rem;
+    font-size: 2.1rem;
   }
 
   .hero-content .btn {

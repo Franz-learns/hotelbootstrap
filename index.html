@@ -159,8 +159,172 @@
       </div>
     </div>
   </section>
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- RESERVATION FORM -->
+  <section class="py-5" id="booking">
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="reservation-box p-4 p-md-5">
+            <div class="text-center mb-4">
+              <span class="section-label">RESERVE A ROOM</span>
+              <h2 class="section-title">Plan Your Stay</h2>
+            </div>
+
+            <form id="reservationForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="guestName" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="guestName" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="checkIn" class="form-label">Check-in</label>
+                  <input type="date" class="form-control" id="checkIn" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="checkOut" class="form-label">Check-out</label>
+                  <input type="date" class="form-control" id="checkOut" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="roomType" class="form-label">Room Type</label>
+                  <select class="form-select" id="roomType" required>
+                    <option value="">Select room</option>
+                    <option>Deluxe Room</option>
+                    <option>Premier Room</option>
+                    <option>Executive Room</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="guests" class="form-label">Guests</label>
+                  <select class="form-select" id="guests" required>
+                    <option value="">Select guests</option>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4+ Guests</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">Special Request</label>
+                  <textarea class="form-control" id="message" rows="3"
+                            placeholder="Optional request"></textarea>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-dark btn-lg px-5">
+                    Submit Reservation
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <div id="reservationMessage" class="alert alert-success mt-4 d-none" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-5 contact-section">
+    <div class="container py-4">
+      <div class="row g-5">
+        <div class="col-lg-5 text-white">
+          <span class="section-label light-label">CONTACT</span>
+          <h2 class="display-6 fw-bold">Have Questions?</h2>
+          <p>
+            Send us a message about room availability, amenities, or your
+            reservation request.
+          </p>
+          <p><strong>Location:</strong> Quezon City, Philippines</p>
+          <p><strong>Phone:</strong> +63 2 0000 0000</p>
+        </div>
+
+        <div class="col-lg-7">
+          <form id="contactForm" class="bg-white p-4 rounded-4 shadow">
+            <h3 class="mb-4">Contact Form</h3>
+
+            <div class="mb-3">
+              <label for="contactName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="contactName" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="contactMessage" class="form-label">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Send Message</button>
+            <div id="contactMessageBox" class="alert alert-success mt-3 d-none"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO-COLUMN FOOTER -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-1">Luxent Hotel</h5>
+          <small>Hotel Reservation Concepts</small>
+        </div>
+
+        <div class="col-md-6 text-md-end">
+          <a href="#home">Home</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#reservation">Reservation</a>
+          <p class="mb-0 mt-2 small">© <span id="year"></span> Student Web Project</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="reservationModal" tabindex="-1"
+       aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reservationModalLabel">Quick Reservation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Ready to reserve your stay?</p>
+          <p class="text-muted">
+            Click the button below to go to the reservation section.
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="#booking" class="btn btn-dark" data-bs-dismiss="modal">Reserve Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>

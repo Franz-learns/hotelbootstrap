@@ -1,11 +1,17 @@
 :root {
-  --red: #b11226;
-  --red-dark: #7f0d1b;
-  --red-light: #d62839;
-  --dark: #171717;
-  --cream: #f7f4ee;
+  --velvet: #8b0000;
+  --velvet-dark: #5c0000;
+  --velvet-light: #a52a2a;
+  --burgundy: #4a0000;
+  --dark: #160808;
+  --cream: #f8f1e8;
   --white: #ffffff;
+  --gold: #d4af37;
 }
+
+/* ==========================================
+   GENERAL
+   ========================================== */
 
 html {
   scroll-behavior: smooth;
@@ -15,41 +21,49 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
   line-height: 1.7;
+  background: var(--cream);
 }
 
 /* ==========================================
-   NAVIGATION
+   NAVIGATION / HEADER
    ========================================== */
 
 .custom-navbar {
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(92, 0, 0, 0.97);
   backdrop-filter: blur(8px);
+  border-bottom: 2px solid rgba(212, 175, 55, 0.4);
 }
 
 .navbar-brand {
   letter-spacing: 2px;
+  color: white !important;
 }
 
 .nav-link {
   margin-left: 8px;
-  transition: color 0.2s ease;
+  color: white !important;
+  transition: 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--red-light) !important;
+  color: #e6c85c !important;
 }
 
-/* Red Button */
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
 .btn-gold {
-  background: var(--red);
-  border: 1px solid var(--red);
+  background: var(--velvet);
+  border: 1px solid var(--velvet);
   color: white;
   font-weight: 600;
+  border-radius: 8px;
 }
 
 .btn-gold:hover {
-  background: var(--red-dark);
-  border-color: var(--red-dark);
+  background: var(--velvet-light);
+  border-color: var(--velvet-light);
   color: white;
 }
 
@@ -60,6 +74,7 @@ body {
 .hero-section {
   position: relative;
   min-height: 100vh;
+
   background-image: url("Photos/lobby.png");
   background-size: cover;
   background-position: center;
@@ -71,9 +86,9 @@ body {
 
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.82),
-    rgba(127, 13, 27, 0.45),
-    rgba(0, 0, 0, 0.2)
+    rgba(40, 0, 0, 0.88),
+    rgba(92, 0, 0, 0.58),
+    rgba(0, 0, 0, 0.25)
   );
 }
 
@@ -85,7 +100,7 @@ body {
 .letter-spacing {
   letter-spacing: 4px;
   font-weight: 700;
-  color: #ff4d5e;
+  color: #e6c85c;
 }
 
 .image-caption {
@@ -93,6 +108,7 @@ body {
   bottom: 10px;
   right: 15px;
   z-index: 3;
+
   color: white;
   font-size: 0.7rem;
   opacity: 0.7;
@@ -104,10 +120,13 @@ body {
 
 .section-label {
   display: inline-block;
-  color: var(--red);
+
+  color: var(--velvet);
+
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 3px;
+
   margin-bottom: 8px;
 }
 
@@ -116,14 +135,19 @@ body {
   margin-bottom: 18px;
 }
 
-/* Red accent under section titles */
 .section-title::after {
   content: "";
+
   display: block;
-  width: 55px;
-  height: 3px;
-  background: var(--red);
+
+  width: 60px;
+  height: 4px;
+
+  background: var(--velvet);
+
   margin-top: 12px;
+
+  border-radius: 5px;
 }
 
 /* ==========================================
@@ -136,20 +160,23 @@ body {
 
 .overlay-box {
   position: absolute;
+
   left: 25px;
   bottom: 25px;
 
-  background: rgba(0, 0, 0, 0.82);
+  background: rgba(74, 0, 0, 0.92);
 
   color: white;
+
   padding: 18px 22px;
 
-  border-radius: 12px;
-  border-left: 4px solid var(--red);
+  border-radius: 10px;
+
+  border-left: 4px solid var(--gold);
 }
 
 .overlay-box small {
-  color: #ff4d5e;
+  color: #e6c85c;
   letter-spacing: 2px;
 }
 
@@ -159,10 +186,14 @@ body {
 
 .amenity-card {
   background: white;
+
   border-radius: 16px;
+
   overflow: hidden;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--velvet);
+
+  box-shadow: 0 8px 25px rgba(60, 0, 0, 0.12);
 
   transition:
     transform 0.25s ease,
@@ -173,7 +204,7 @@ body {
   transform: translateY(-7px);
 
   box-shadow:
-    0 14px 30px rgba(177, 18, 38, 0.18);
+    0 14px 30px rgba(92, 0, 0, 0.25);
 }
 
 .amenity-image {
@@ -185,41 +216,96 @@ body {
 .amenity-card h3 {
   font-size: 1.35rem;
   font-weight: 700;
+
+  color: var(--velvet-dark);
 }
 
 /* ==========================================
-   RESERVATION
+   RESERVATION FORM
    ========================================== */
 
 .reservation-box {
-  background: var(--cream);
+  background: linear-gradient(
+    135deg,
+    #fff8f0,
+    #f3dfd5
+  );
+
   border-radius: 20px;
 
-  border-top: 4px solid var(--red);
+  border: 1px solid rgba(139, 0, 0, 0.2);
+
+  border-top: 6px solid var(--velvet);
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(92, 0, 0, 0.15);
 }
+
+/* Form labels */
+
+.reservation-box label {
+  color: var(--velvet-dark);
+  font-weight: 600;
+}
+
+/* Input fields */
 
 .form-control,
 .form-select {
   padding: 12px 14px;
-  border-radius: 10px;
+
+  border-radius: 8px;
+
+  border: 1px solid #c9a9a9;
+
+  background: white;
 }
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--red);
-  box-shadow: 0 0 0 0.2rem rgba(177, 18, 38, 0.15);
+  border-color: var(--velvet);
+
+  box-shadow:
+    0 0 0 0.2rem rgba(139, 0, 0, 0.15);
+}
+
+/* Submit button */
+
+.reservation-box .btn-dark {
+  background: var(--velvet);
+  border-color: var(--velvet);
+
+  color: white;
+
+  font-weight: 600;
+}
+
+.reservation-box .btn-dark:hover {
+  background: var(--velvet-dark);
+  border-color: var(--velvet-dark);
 }
 
 /* ==========================================
-   CONTACT
+   CONTACT SECTION
    ========================================== */
 
 .contact-section {
-  background: #202020;
+  background:
+    linear-gradient(
+      135deg,
+      var(--burgundy),
+      var(--velvet-dark)
+    );
+
+  color: white;
+
+  border-top: 4px solid var(--gold);
 }
 
 .light-label {
-  color: #ff4d5e;
+  color: #e6c85c;
 }
 
 /* ==========================================
@@ -227,65 +313,81 @@ body {
    ========================================== */
 
 .footer {
-  background: #111;
-  color: #ddd;
+  background:
+    linear-gradient(
+      135deg,
+      #4a0000,
+      #250000
+    );
+
+  color: #eee;
+
+  border-top: 2px solid rgba(212, 175, 55, 0.4);
 }
 
 .footer a {
-  color: #ddd;
+  color: #eee;
+
   text-decoration: none;
+
   margin-left: 15px;
 
-  transition: color 0.2s ease;
+  transition: 0.3s ease;
 }
 
 .footer a:hover {
-  color: #ff4d5e;
+  color: #e6c85c;
 }
 
 /* ==========================================
-   RED HOTEL SPECIAL ELEMENTS
+   RED VELVET ELEMENTS
    ========================================== */
 
-/* Red accent line */
-.red-line {
-  width: 60px;
-  height: 4px;
-  background: var(--red);
-  margin: 15px 0;
-}
-
-/* Red badge */
 .red-badge {
   display: inline-block;
 
-  background: var(--red);
+  background: var(--velvet);
+
   color: white;
 
-  padding: 6px 12px;
+  padding: 6px 14px;
 
   border-radius: 50px;
 
   font-size: 0.75rem;
+
   font-weight: 700;
 
   letter-spacing: 1px;
 }
 
-/* Red outline button */
+.red-line {
+  width: 60px;
+  height: 4px;
+
+  background: var(--velvet);
+
+  margin: 15px 0;
+
+  border-radius: 5px;
+}
+
 .btn-outline-red {
-  border: 2px solid var(--red);
-  color: var(--red);
+  border: 2px solid var(--velvet);
+
+  color: var(--velvet);
+
   font-weight: 600;
 }
 
 .btn-outline-red:hover {
-  background: var(--red);
+  background: var(--velvet);
+
   color: white;
 }
 
 /* ==========================================
-   MEDIA QUERIES - TABLET
+   MOBILE
    ========================================== */
 
 @media (max-width: 991.98px) {
@@ -303,10 +405,6 @@ body {
     background-position: 60% center;
   }
 }
-
-/* ==========================================
-   MEDIA QUERIES - MOBILE
-   ========================================== */
 
 @media (max-width: 767.98px) {
 
@@ -337,6 +435,10 @@ body {
     height: 210px;
   }
 
+  .reservation-box {
+    padding: 20px;
+  }
+
   .footer {
     text-align: center;
   }
@@ -346,10 +448,6 @@ body {
     margin: 5px 7px;
   }
 }
-
-/* ==========================================
-   SMALL MOBILE
-   ========================================== */
 
 @media (max-width: 575.98px) {
 

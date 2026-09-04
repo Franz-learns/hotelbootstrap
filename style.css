@@ -225,36 +225,92 @@ body {
     0 0 0 0.2rem rgba(255,255,255,0.2);
 }
 
-/* =========================
-   CONTACT
-   ========================= */
+/* ==========================================
+   CONTACT SECTION
+========================================== */
 
 .contact-section {
-  background: var(--red-dark);
+  background: #5C0000 !important;
+  color: white;
+  border-top: 4px solid #C1121F;
+  padding: 70px 0;
+}
+
+/* Contact headings and text */
+
+.contact-section h2,
+.contact-section h3,
+.contact-section p {
   color: white;
 }
 
 .light-label {
-  color: #ffd6d6;
+  color: #FFB3B3;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* Contact form */
 
-.footer {
-  background: var(--red);
+.contact-section form {
+  background: #8B0000;
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+  border: 2px solid #C1121F;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact form title */
+
+.contact-section form h3,
+.contact-section form h4 {
   color: white;
 }
 
-.footer a {
+/* Form labels */
+
+.contact-section form label {
   color: white;
-  text-decoration: none;
-  margin-left: 15px;
+  font-weight: 600;
 }
 
-.footer a:hover {
-  color: #ffd6d6;
+/* Input fields */
+
+.contact-section form .form-control {
+  background: #FFF5F5;
+  color: #333;
+  border: 2px solid #B11226;
+  border-radius: 10px;
+}
+
+/* Input when clicked */
+
+.contact-section form .form-control:focus {
+  background: white;
+  color: #222;
+  border-color: #FF4D5E;
+  box-shadow: 0 0 0 0.2rem rgba(255, 77, 94, 0.25);
+}
+
+/* Placeholder text */
+
+.contact-section form .form-control::placeholder {
+  color: #777;
+}
+
+/* Send Message button */
+
+.contact-section form button {
+  background: #C1121F;
+  border: 1px solid #C1121F;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.contact-section form button:hover {
+  background: #5C0000;
+  border-color: white;
 }
 
 /* =========================

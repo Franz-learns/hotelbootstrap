@@ -1,3 +1,13 @@
+/* ==========================================
+   LUXENT HOTEL - CUSTOM CSS
+   ========================================== */
+
+:root {
+  --gold: #c9a227;
+  --dark: #171717;
+  --cream: #f7f4ee;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,6 +17,7 @@ body {
   color: #333;
   line-height: 1.7;
 }
+
 /* Navigation */
 .custom-navbar {
   background: rgba(0, 0, 0, 0.82);
@@ -32,4 +43,213 @@ body {
   background: #a98516;
   border-color: #a98516;
   color: white;
+}
+
+/* Hero */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.letter-spacing {
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #e6c85c;
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  z-index: 3;
+  color: white;
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* General sections */
+.section-label {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* Image overlay */
+.overlay-card {
+  position: relative;
+}
+
+.overlay-box {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  background: rgba(0, 0, 0, 0.78);
+  color: white;
+  padding: 18px 22px;
+  border-radius: 12px;
+}
+
+.overlay-box small {
+  color: #e6c85c;
+  letter-spacing: 2px;
+}
+
+/* Amenity cards */
+.amenity-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.13);
+}
+
+.amenity-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.amenity-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* Reservation */
+.reservation-box {
+  background: var(--cream);
+  border-radius: 20px;
+}
+
+.form-control,
+.form-select {
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+
+/* Contact */
+.contact-section {
+  background: #202020;
+}
+
+.light-label {
+  color: #e6c85c;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #ddd;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.footer a:hover {
+  color: #e6c85c;
+}
+
+/* ==========================================
+   MEDIA QUERIES - MOBILE
+   ========================================== */
+
+@media (max-width: 991.98px) {
+  .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar .btn {
+    margin-top: 8px;
+  }
+
+  .hero-section {
+    background-position: 60% center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 90vh;
+  }
+
+  .hero-content .row {
+    min-height: 90vh !important;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content .lead {
+    font-size: 1rem;
+  }
+
+  .overlay-box {
+    left: 15px;
+    bottom: 15px;
+    padding: 12px 15px;
+  }
+
+  .amenity-image {
+    height: 210px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer a {
+    display: inline-block;
+    margin: 5px 7px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-content h1 {
+    font-size: 2.15rem;
+  }
+
+  .hero-content .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
